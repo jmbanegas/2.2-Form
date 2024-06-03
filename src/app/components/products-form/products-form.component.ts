@@ -46,7 +46,7 @@ export class ProductsComponent {
     if (this.productForm.valid) {
       console.log('submit', this.productForm.value);
       this.apiService.create(this.productForm.value).subscribe(() => {
-        this.createNotification('success', this.productForm.value.productName, "Product has been created successfully!");
+        this.createNotification('success', this.productsForm.value.productName, "Product has been created successfully!");
         this.productForm.reset();
       });
     } else {
